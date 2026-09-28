@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c101a">
+  <meta name="description" content="A polished, responsive calculator by Nirendra Patel.">
+  <title>Calculator — Nirendra Patel</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="calculator.js" defer></script>
+</head>
+<body class="calculator-page">
+  <main class="calculator-layout">
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="Nirendra Patel home"><span class="brand-mark">n.</span><span>NIRENDRA <b>PATEL</b></span></a>
+      <div class="connection" id="connection" role="status"><span class="connection-dot"></span><span id="connection-label">Checking connection</span></div>
+    </header>
+
+    <section class="calculator-intro">
+      <p class="eyebrow">SIMPLE. PRECISE. YOURS.</p>
+      <h1>Make it <span>add up.</span></h1>
+      <p>Your numbers, handled with care.</p>
+    </section>
+
+    <section class="calculator-card" aria-label="Calculator">
+      <div class="display" aria-live="polite" aria-atomic="true">
+        <div class="expression" id="expression" aria-label="Expression">&nbsp;</div>
+        <output class="result" id="result" aria-label="Display">0</output>
+      </div>
+      <div class="keypad" id="keypad" aria-label="Calculator keys">
+        <button class="key key-utility" data-action="clear" aria-label="Clear">AC</button>
+        <button class="key key-utility" data-action="sign" aria-label="Change sign">+/−</button>
+        <button class="key key-utility" data-action="percent" aria-label="Percent">%</button>
+        <button class="key key-operator" data-operator="÷" aria-label="Divide">÷</button>
+        <button class="key" data-digit="7">7</button><button class="key" data-digit="8">8</button><button class="key" data-digit="9">9</button><button class="key key-operator" data-operator="×" aria-label="Multiply">×</button>
+        <button class="key" data-digit="4">4</button><button class="key" data-digit="5">5</button><button class="key" data-digit="6">6</button><button class="key key-operator" data-operator="−" aria-label="Subtract">−</button>
+        <button class="key" data-digit="1">1</button><button class="key" data-digit="2">2</button><button class="key" data-digit="3">3</button><button class="key key-operator" data-operator="+" aria-label="Add">+</button>
+        <button class="key key-zero" data-digit="0">0</button><button class="key" data-action="decimal" aria-label="Decimal point">.</button><button class="key key-equals" data-action="equals" aria-label="Equals">=</button>
+      </div>
+      <p class="keyboard-hint">KEYBOARD READY <span>·</span> Enter = &nbsp; Esc = clear</p>
+    </section>
+
+    <footer class="calculator-footer"><span>Powered by <strong>Nirendra</strong></span><span class="privacy-note">Your calculations stay on this device.</span></footer>
+  </main>
+  <div class="offline-overlay" id="offline-overlay" hidden>
+    <div class="offline-panel"><span class="offline-icon" aria-hidden="true">↯</span><p class="eyebrow">CONNECTION REQUIRED</p><h2>You're offline.</h2><p>Reconnect to the internet to use this calculator.</p><button class="retry-button" id="retry-button">Try again</button></div>
+  </div>
+</body>
+</html>
